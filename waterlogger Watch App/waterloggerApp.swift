@@ -1,5 +1,5 @@
 //
-//  waterloggerApp.swift
+//  WaterloggerApp.swift
 //  waterlogger Watch App
 //
 //  Created by Dan Pina on 19.07.25.
@@ -8,10 +8,14 @@
 import SwiftUI
 
 @main
-struct waterlogger_Watch_AppApp: App {
+struct WaterloggerApp: App {
+    @StateObject var healthDataManager = HealthDataManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                MainView()
+            }.environmentObject(healthDataManager)
         }
     }
 }
