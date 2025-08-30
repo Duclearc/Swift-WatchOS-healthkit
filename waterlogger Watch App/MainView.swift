@@ -27,13 +27,29 @@ struct TotalWaterText: View {
 struct MainView: View {
     var healthDataTypes: [HKQuantityTypeIdentifier] = [.dietaryWater]
     
+    
+    
+    init() {
+        let helderHK = HelderHK()
+        helderHK.requestAuthorization { result in
+            print(result)
+
+        }
+        helderHK.fetchTodayTotal()
+    }
+    
     var body: some View {
         VStack {
             TitleView(text: "Today's Total")
             TotalWaterText(amount: 750)
             Button("Log 250ml", systemImage: "drop.fill") {
-                print("hello")
                 
+                print("hello")
+                let helderHK = HelderHK()
+                helderHK.addWater(amountML: 100) { result in
+                    print(result)
+                }
+                helderHK.fetchTodayTotal()
             }
             .foregroundStyle(Color.blue)
 
