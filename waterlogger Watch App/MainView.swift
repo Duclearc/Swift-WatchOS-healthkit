@@ -9,7 +9,7 @@ import SwiftUI
 import HealthKit
 
 struct TotalWaterText: View {
-    var amount: Int = 0
+    var amount: Double = 0
     var measurement = "ml"
     var body: some View {
         HStack {
@@ -26,30 +26,40 @@ struct TotalWaterText: View {
 
 struct MainView: View {
     var healthDataTypes: [HKQuantityTypeIdentifier] = [.dietaryWater]
+    var healthKitManager = HealthKitManager()
+    @State private var totalWater: Double = 0
     
-    
+    func updateTotalWater() {
+        healthKitManager.fetchTodayTotal { [self] total in
+            print("Today's total water intake: \(total) mL")
+            totalWater = total
+        }
+    }
     
     init() {
-        let helderHK = HelderHK()
-        helderHK.requestAuthorization { result in
+        healthKitManager.requestAuthorization { result in
+            print("===== Authorization Result ====")
             print(result)
-
         }
-        helderHK.fetchTodayTotal()
     }
     
     var body: some View {
         VStack {
             TitleView(text: "Today's Total")
-            TotalWaterText(amount: 750)
+            TotalWaterText(amount: totalWater)
             Button("Log 250ml", systemImage: "drop.fill") {
                 
                 print("hello")
-                let helderHK = HelderHK()
-                helderHK.addWater(amountML: 100) { result in
+                
+                healthKitManager.addWater(amountML: 250) { result in
+                    print("===== Add Water Result ====")
                     print(result)
+                    if(result) {
+                        updateTotalWater()
+                    }
                 }
-                helderHK.fetchTodayTotal()
+                
+                print("/// Total Water: \(totalWater) ml")
             }
             .foregroundStyle(Color.blue)
 
@@ -57,6 +67,9 @@ struct MainView: View {
         }
         .navigationTitle("Waterlogger")
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            updateTotalWater()
+        }
     }
 }
 

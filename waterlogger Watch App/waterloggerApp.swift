@@ -9,13 +9,12 @@ import SwiftUI
 
 @main
 struct WaterloggerApp: App {
-    @StateObject var healthDataManager = HealthDataManager()
     
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 MainView()
-            }.environmentObject(healthDataManager)
+            }
         }
     }
 }
