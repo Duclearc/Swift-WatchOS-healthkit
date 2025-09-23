@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct LogView: View {
-    @State var logs: [String] = [
-        "500ml - Water 23:01",
-        "500ml - Water 23:01",
-        "500ml - Water 23:01",
-        "250ml - Water 22:33",
-        "500ml - Water 23:01"
-    ]
+    var healthKitManager: HealthKitManager
+    @State var logs: [String] = []
+    
+    init() {
+        healthKitManager.fetchTodayLogs { logHistory in
+            logs = logHistory.map(\.description).reversed()
+        }
+    }
+
     var body: some View {
         VStack{            
             TitleView(text: "Today's Log:")
@@ -30,6 +32,6 @@ struct LogView: View {
     }
 }
 
-#Preview {
-    LogView()
-}
+//#Preview {
+//    LogView(healthKitManager: HealthKitManager())
+//}

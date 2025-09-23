@@ -28,22 +28,15 @@ final class HealthKitManager {
             options: .cumulativeSum
         ) { ssd, stats, err in
             if ((err) != nil) {
-                print("Error fetching statistics: \(err?.localizedDescription)")
+                print("Error fetching statistics: \(String(describing: err?.localizedDescription))")
                 completion(0)
                 return
             }
-            print(err)
-            print(stats)
-            print("--------")
-            print(ssd)
-            print(".........")
             todaysTotal = (stats?.sumQuantity()?.doubleValue(for: .init(from: "mL"))) ?? todaysTotal
-            print("....TODAYsTOTAL....")
-            print(todaysTotal)
+            print("....TODAYsTOTAL: \(todaysTotal)....")
             completion(todaysTotal)
         }
-        let queryResult = healthStore.execute(query)
-        
+        let queryResult: Void = healthStore.execute(query)
     }
     
     func requestAuthorization(completion: @escaping (Bool) -> Void) {
@@ -66,4 +59,50 @@ final class HealthKitManager {
             completion(success)
         }
     }
+    
+    func fetchTodayLogs(completion: @escaping ([HKQuantitySample]) -> Void) {
+        let predicate = getTodayPredicate()
+        let query = HKSampleQuery(sampleType: waterType, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { query, results, error in
+            if let error = error {
+                print("Error fetching samples: \(error.localizedDescription)")
+                completion([])
+                return
+            }
+            
+            guard let results = results as? [HKQuantitySample] else {
+                completion([])
+                return
+            }
+            print(results)
+            completion(results)
+        }
+        
+        healthStore.execute(query)
+    }
+    
+    func fetchTodayLogs2(completion: @escaping (Array<Any>) -> Void) {
+        var todaysLogs: Array<Any> = []
+        let query = HKStatisticsQuery(
+            quantityType: waterType,
+            quantitySamplePredicate: getTodayPredicate(),
+            options: .separateBySource
+        ) { ssd, stats, err in
+            if ((err) != nil) {
+                print("Error fetching statistics: \(String(describing: err?.localizedDescription))")
+                completion([])
+                return
+            }
+            print("......SSD......")
+            print(ssd.value(forKey: "sources"))
+            print("...............")
+            print("----STATS------")
+            print(stats)
+            print("---------------")
+            todaysLogs = (stats?.sources) ?? todaysLogs
+            print("....TODAYsTOTAL: \(todaysLogs)....")
+            completion(todaysLogs)
+        }
+        let queryResult: Void = healthStore.execute(query)
+    }
+
 }

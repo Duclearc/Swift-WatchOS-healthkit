@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import HealthKit
 
 struct TotalWaterText: View {
     var amount: Double = 0
@@ -14,9 +13,7 @@ struct TotalWaterText: View {
     var body: some View {
         HStack {
             Group {
-                Text(
-                    amount.formatted(.number.precision(.fractionLength(0)))
-                )
+                Text(amount.formatted(.number.precision(.fractionLength(0))))
                 .foregroundStyle(Color.cyan) +
                 Text("\(measurement)")
             }
@@ -25,21 +22,13 @@ struct TotalWaterText: View {
 }
 
 struct MainView: View {
-    var healthDataTypes: [HKQuantityTypeIdentifier] = [.dietaryWater]
-    var healthKitManager = HealthKitManager()
+    var healthKitManager: HealthKitManager
     @State private var totalWater: Double = 0
+    @State private var buttonAmount: Double = 100
     
     func updateTotalWater() {
         healthKitManager.fetchTodayTotal { [self] total in
-            print("Today's total water intake: \(total) mL")
             totalWater = total
-        }
-    }
-    
-    init() {
-        healthKitManager.requestAuthorization { result in
-            print("===== Authorization Result ====")
-            print(result)
         }
     }
     
@@ -47,25 +36,20 @@ struct MainView: View {
         VStack {
             TitleView(text: "Today's Total")
             TotalWaterText(amount: totalWater)
-            Button("Log 250ml", systemImage: "drop.fill") {
-                
-                print("hello")
-                
-                healthKitManager.addWater(amountML: 250) { result in
-                    print("===== Add Water Result ====")
-                    print(result)
+            Button("Log \(buttonAmount.formatted(.number.precision(.integerLength(.zero))))ml", systemImage: "drop.fill") {
+                healthKitManager.addWater(amountML: buttonAmount) { result in
+                    print("===== Add Water Result: \(result) ====")
                     if(result) {
                         updateTotalWater()
                     }
                 }
-                
-                print("/// Total Water: \(totalWater) ml")
+                print("===== Total Water: \(totalWater) ml =====")
             }
+            .padding(.top)
             .foregroundStyle(Color.blue)
-
             .scenePadding()
         }
-        .navigationTitle("Waterlogger")
+//        .navigationTitle("Waterlogger")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             updateTotalWater()
@@ -74,5 +58,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView()
+    MainView(healthKitManager: HealthKitManager())
 }

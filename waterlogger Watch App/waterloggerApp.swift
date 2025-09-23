@@ -13,7 +13,7 @@ struct WaterloggerApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                MainView()
+                WaterloggerTabs()
             }
         }
     }
