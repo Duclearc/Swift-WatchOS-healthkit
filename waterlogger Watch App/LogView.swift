@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import HealthKit
+import Foundation
 
 struct LogView: View {
     var healthKitManager: HealthKitManager
-    @State var logs: [String] = []
+    let dateFormatter = DateFormatter()
+    @State var logs: [HKQuantitySample] = []
     
-    init() {
-        healthKitManager.fetchTodayLogs { logHistory in
-            logs = logHistory.map(\.description).reversed()
+    func formattedDate(_ dateString: Date) -> String {
+            dateFormatter.dateFormat = "HH:mm:ss"
+            return dateFormatter.string(from: dateString)
         }
-    }
 
     var body: some View {
         VStack{            
@@ -23,12 +25,17 @@ struct LogView: View {
             
             List {
                 ForEach(logs, id: \.self) { log in
-                    Text(log)
+                    Text("\(log.quantity.description) - \(formattedDate(log.startDate))")
                 }
             }
         }
-        .navigationTitle("Today's Log")
+//        .navigationTitle("Today's Log")
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            healthKitManager.fetchTodayLogs { logHistory in
+                logs = logHistory.reversed()
+            }
+        }
     }
 }
 

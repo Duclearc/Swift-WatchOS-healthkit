@@ -24,7 +24,7 @@ struct TotalWaterText: View {
 struct MainView: View {
     var healthKitManager: HealthKitManager
     @State private var totalWater: Double = 0
-    @State private var buttonAmount: Double = 100
+    @State private var buttonAmount: Double = 250
     
     func updateTotalWater() {
         healthKitManager.fetchTodayTotal { [self] total in

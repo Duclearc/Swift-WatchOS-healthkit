@@ -11,9 +11,9 @@ struct TitleView: View {
     var text: String = "Watterlogger"
     var body: some View {
         HStack {
-            Image(systemName: "waterbottle.fill")
+            Image(systemName: text.lowercased().contains("log") ? "calendar": "waterbottle.fill")
                 .imageScale(.large)
-                .foregroundStyle(Color.blue)
+                .foregroundStyle(text.lowercased().contains("log") ? Color.red : Color.blue)
             Text(text)
                 .fontWeight(.bold)
                 .font(.headline.lowercaseSmallCaps())
