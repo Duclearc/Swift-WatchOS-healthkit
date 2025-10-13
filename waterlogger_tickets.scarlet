@@ -1,0 +1,155 @@
+{
+  "issues" : [
+    {
+      "identifier" : "D05C19D0-E2A6-45B0-8C0B-C61DFDDAF4AF",
+      "body" : "I want to input a custom amount, different from the default button\n\n`250 mL` → default button\n`custom` → custom amount button (opens numpad where you can input the amount you want to save)",
+      "due" : 782049658.141171,
+      "created" : 782049658.141171,
+      "closed" : false,
+      "title" : "Feature: Custom button",
+      "modified" : 782050687.427914,
+      "number" : 1
+    },
+    {
+      "identifier" : "30A28B87-9542-4988-99A5-BCF81C6A5290",
+      "body" : "",
+      "due" : 782050251.241014,
+      "created" : 782050251.241013,
+      "closed" : false,
+      "title" : "Feature: smoothie button",
+      "modified" : 782050896.941125,
+      "number" : 2
+    },
+    {
+      "identifier" : "C4EA7239-8C44-4C41-9AC3-429698200854",
+      "body" : "Coffee 250ml = 150ml water",
+      "due" : 782050322.441137,
+      "created" : 782050322.441136,
+      "closed" : false,
+      "title" : "Feature: coffee button",
+      "modified" : 782050887.789596,
+      "number" : 3
+    },
+    {
+      "identifier" : "0E458D55-62EE-456A-8953-7C6F220E22B2",
+      "body" : "The app reminds you periodically to drink water via push notification",
+      "due" : 782050351.422433,
+      "created" : 782050351.422433,
+      "closed" : false,
+      "title" : "Feature: reminders",
+      "modified" : 782050880.852869,
+      "number" : 4
+    },
+    {
+      "identifier" : "CB53813B-6383-4E6E-A680-0763003DF9E8",
+      "body" : "- Shows total intake\n- pressing adds default amount\n",
+      "due" : 782050361.563743,
+      "created" : 782050361.563743,
+      "closed" : false,
+      "title" : "Feature: complication",
+      "modified" : 782050724.044314,
+      "number" : 5
+    },
+    {
+      "identifier" : "9858EA27-1115-41A5-8C5E-F94EA5B7931D",
+      "body" : "Main button + complication have different amounts and\/or measurements",
+      "due" : 782050384.318732,
+      "created" : 782050384.318732,
+      "closed" : false,
+      "title" : "Setting: change default button",
+      "modified" : 782050679.527122,
+      "number" : 6
+    },
+    {
+      "identifier" : "18E9A4D2-F245-4FDC-A575-73F61F3C2752",
+      "body" : "e.g. mL → L",
+      "due" : 782050486.696597,
+      "created" : 782050486.696597,
+      "closed" : false,
+      "title" : "Setting: change measurement",
+      "modified" : 782050603.601699,
+      "number" : 7
+    },
+    {
+      "identifier" : "934B26FA-546C-4000-8BFB-11B1EC51FA31",
+      "body" : "- pressing opens the app without adding\n- shows how much until your goal\n- setting: change “on press” amount",
+      "due" : 782050732.604121,
+      "created" : 782050732.604121,
+      "closed" : false,
+      "title" : "Improvement: complication",
+      "modified" : 782050814.965098,
+      "number" : 8
+    },
+    {
+      "identifier" : "6FD42263-C5C7-4A07-A40D-7F9BAECD719A",
+      "body" : "How much water you want to intake in a day\n- if set → complication shows how much until your goal\n- if not → complication shows your total intake for today",
+      "due" : 782050903.473186,
+      "created" : 782050903.473185,
+      "closed" : false,
+      "title" : "Feature: optional daily goal",
+      "modified" : 782050971.832611,
+      "number" : 9
+    },
+    {
+      "identifier" : "660370D8-3001-4700-90D9-47490FB44C1A",
+      "body" : "",
+      "due" : 782051125.153014,
+      "created" : 782051125.153014,
+      "closed" : false,
+      "title" : "Feature: logo",
+      "modified" : 782051261.622735,
+      "number" : 10
+    }
+  ],
+  "folders" : [
+    {
+      "identifier" : "B6C0FC0D-DACD-4891-96CE-FDD7B88E9758",
+      "title" : "To Do",
+      "issueIDs" : [
+        "6FD42263-C5C7-4A07-A40D-7F9BAECD719A",
+        "30A28B87-9542-4988-99A5-BCF81C6A5290",
+        "C4EA7239-8C44-4C41-9AC3-429698200854",
+        "0E458D55-62EE-456A-8953-7C6F220E22B2",
+        "934B26FA-546C-4000-8BFB-11B1EC51FA31",
+        "CB53813B-6383-4E6E-A680-0763003DF9E8",
+        "D05C19D0-E2A6-45B0-8C0B-C61DFDDAF4AF",
+        "9858EA27-1115-41A5-8C5E-F94EA5B7931D",
+        "18E9A4D2-F245-4FDC-A575-73F61F3C2752",
+        "660370D8-3001-4700-90D9-47490FB44C1A"
+      ],
+      "color" : "ffff3b30"
+    },
+    {
+      "identifier" : "5A0B591C-169C-4865-AB43-377228D13E49",
+      "title" : "In Progress",
+      "issueIDs" : [
+
+      ],
+      "color" : "ffff3b30"
+    },
+    {
+      "identifier" : "9B20C1D9-9743-4A2E-A22E-755058272C25",
+      "title" : "Completed",
+      "issueIDs" : [
+
+      ],
+      "color" : "ffff3b30"
+    },
+    {
+      "identifier" : "FB3D8752-7FD8-4855-9A50-CE7917F124C0",
+      "title" : "On Hold",
+      "issueIDs" : [
+
+      ],
+      "color" : "ffff3b30"
+    },
+    {
+      "identifier" : "3FC90780-9349-4C59-99A4-FDBC131E62CC",
+      "title" : "Dropped",
+      "issueIDs" : [
+
+      ],
+      "color" : "ffff3b30"
+    }
+  ]
+}

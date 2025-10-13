@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct TotalWaterText: View {
     var amount: Double = 0
@@ -25,6 +26,7 @@ struct MainView: View {
     var healthKitManager: HealthKitManager
     @State private var totalWater: Double = 0
     @State private var buttonAmount: Double = 250
+    @State private var measurementUnit = HKUnit.literUnit(with: .milli).unitString
     
     func updateTotalWater() {
         healthKitManager.fetchTodayTotal { [self] total in
@@ -35,8 +37,8 @@ struct MainView: View {
     var body: some View {
         VStack {
             TitleView(text: "Today's Total")
-            TotalWaterText(amount: totalWater)
-            Button("Log \(buttonAmount.formatted(.number.precision(.integerLength(.zero))))ml", systemImage: "drop.fill") {
+            TotalWaterText(amount: totalWater, measurement: measurementUnit)
+            Button("Log \(buttonAmount.formatted(.number.precision(.integerLength(.zero))))\(measurementUnit)", systemImage: "drop.fill") {
                 healthKitManager.addWater(amountML: buttonAmount) { result in
                     print("===== Add Water Result: \(result) ====")
                     if(result) {
