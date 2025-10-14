@@ -17,7 +17,7 @@ struct WaterloggerTabs: View {
         healthKitManager.requestAuthorization { result in
             print("===== Authorization Result: \(result) ====")
         }
-        healthKitManager.fetchTodayLogs { result in
+        healthKitManager.fetchTodaysLogs { result in
             print("===== Authorization Result: \(result) ====")
         }
     }
