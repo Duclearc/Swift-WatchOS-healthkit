@@ -1,6 +1,141 @@
 {
+  "issues" : [
+    {
+      "modified" : 782171637.569846,
+      "due" : 782049658.141171,
+      "body" : "I want to input a custom amount, different from the default button\n\n`250 mL` → default button\n`custom` → custom amount button (opens numpad where you can input the amount you want to save)",
+      "created" : 782049658.141171,
+      "identifier" : "D05C19D0-E2A6-45B0-8C0B-C61DFDDAF4AF",
+      "title" : "Feature: custom button",
+      "closed" : false,
+      "number" : 1
+    },
+    {
+      "modified" : 782050896.941125,
+      "due" : 782050251.241014,
+      "body" : "",
+      "created" : 782050251.241013,
+      "identifier" : "30A28B87-9542-4988-99A5-BCF81C6A5290",
+      "title" : "Feature: smoothie button",
+      "closed" : false,
+      "number" : 2
+    },
+    {
+      "modified" : 782050887.789596,
+      "due" : 782050322.441137,
+      "body" : "Coffee 250ml = 150ml water",
+      "created" : 782050322.441136,
+      "identifier" : "C4EA7239-8C44-4C41-9AC3-429698200854",
+      "title" : "Feature: coffee button",
+      "closed" : false,
+      "number" : 3
+    },
+    {
+      "modified" : 782050880.852869,
+      "due" : 782050351.422433,
+      "body" : "The app reminds you periodically to drink water via push notification",
+      "created" : 782050351.422433,
+      "identifier" : "0E458D55-62EE-456A-8953-7C6F220E22B2",
+      "title" : "Feature: reminders",
+      "closed" : false,
+      "number" : 4
+    },
+    {
+      "modified" : 782050724.044314,
+      "due" : 782050361.563743,
+      "body" : "- Shows total intake\n- pressing adds default amount\n",
+      "created" : 782050361.563743,
+      "identifier" : "CB53813B-6383-4E6E-A680-0763003DF9E8",
+      "title" : "Feature: complication",
+      "closed" : false,
+      "number" : 5
+    },
+    {
+      "modified" : 782050679.527122,
+      "due" : 782050384.318732,
+      "body" : "Main button + complication have different amounts and\/or measurements",
+      "created" : 782050384.318732,
+      "identifier" : "9858EA27-1115-41A5-8C5E-F94EA5B7931D",
+      "title" : "Setting: change default button",
+      "closed" : false,
+      "number" : 6
+    },
+    {
+      "modified" : 782050603.601699,
+      "due" : 782050486.696597,
+      "body" : "e.g. mL → L",
+      "created" : 782050486.696597,
+      "identifier" : "18E9A4D2-F245-4FDC-A575-73F61F3C2752",
+      "title" : "Setting: change measurement",
+      "closed" : false,
+      "number" : 7
+    },
+    {
+      "modified" : 782050814.965098,
+      "due" : 782050732.604121,
+      "body" : "- pressing opens the app without adding\n- shows how much until your goal\n- setting: change “on press” amount",
+      "created" : 782050732.604121,
+      "identifier" : "934B26FA-546C-4000-8BFB-11B1EC51FA31",
+      "title" : "Improvement: complication",
+      "closed" : false,
+      "number" : 8
+    },
+    {
+      "modified" : 782050971.832611,
+      "due" : 782050903.473186,
+      "body" : "How much water you want to intake in a day\n- if set → complication shows how much until your goal\n- if not → complication shows your total intake for today",
+      "created" : 782050903.473185,
+      "identifier" : "6FD42263-C5C7-4A07-A40D-7F9BAECD719A",
+      "title" : "Feature: optional daily goal",
+      "closed" : false,
+      "number" : 9
+    },
+    {
+      "modified" : 782155873.056682,
+      "due" : 782051125.153014,
+      "body" : "Add logo for app",
+      "created" : 782051125.153014,
+      "identifier" : "660370D8-3001-4700-90D9-47490FB44C1A",
+      "title" : "Feature: logo",
+      "closed" : false,
+      "number" : 10
+    },
+    {
+      "modified" : 782155903.385077,
+      "due" : 782155873.35916,
+      "body" : "",
+      "created" : 782155873.359159,
+      "identifier" : "BAEA07A8-B1D5-4D6C-A75C-3770AEB49925",
+      "title" : "Bug: MainView doesn’t update with water from Health.app",
+      "closed" : false,
+      "number" : 11
+    },
+    {
+      "modified" : 782166529.267764,
+      "due" : 782166518.064956,
+      "body" : "",
+      "created" : 782166518.064955,
+      "identifier" : "602740BE-EA22-4DFC-9B61-93E36A59C323",
+      "title" : "Feature: refresh button",
+      "closed" : false,
+      "number" : 12
+    },
+    {
+      "modified" : 782171729.288057,
+      "due" : 782171646.856041,
+      "body" : "- the entire app should use the measurement set in HealthKitManager\n- the string should be consistent\n- the logs (including external ones) should be converted and displayed in the selected measurement)",
+      "created" : 782171646.85604,
+      "identifier" : "0E9315C1-A0B9-4C6E-8C87-F9805ACB1AB9",
+      "title" : "Bug: measurement doesn’t sync",
+      "closed" : false,
+      "number" : 13
+    }
+  ],
   "folders" : [
     {
+      "identifier" : "B6C0FC0D-DACD-4891-96CE-FDD7B88E9758",
+      "title" : "To Do",
+      "color" : "ffff3b30",
       "issueIDs" : [
         "6FD42263-C5C7-4A07-A40D-7F9BAECD719A",
         "30A28B87-9542-4988-99A5-BCF81C6A5290",
@@ -10,178 +145,42 @@
         "CB53813B-6383-4E6E-A680-0763003DF9E8",
         "D05C19D0-E2A6-45B0-8C0B-C61DFDDAF4AF",
         "9858EA27-1115-41A5-8C5E-F94EA5B7931D",
-        "18E9A4D2-F245-4FDC-A575-73F61F3C2752",
-        "660370D8-3001-4700-90D9-47490FB44C1A"
-      ],
-      "color" : "ffff3b30",
-      "title" : "To Do",
-      "identifier" : "B6C0FC0D-DACD-4891-96CE-FDD7B88E9758"
+        "18E9A4D2-F245-4FDC-A575-73F61F3C2752"
+      ]
     },
     {
-      "issueIDs" : [
-
-      ],
-      "color" : "ffff3b30",
+      "identifier" : "5A0B591C-169C-4865-AB43-377228D13E49",
       "title" : "In Progress",
-      "identifier" : "5A0B591C-169C-4865-AB43-377228D13E49"
+      "color" : "ffff3b30",
+      "issueIDs" : [
+        "660370D8-3001-4700-90D9-47490FB44C1A"
+      ]
     },
     {
+      "identifier" : "9B20C1D9-9743-4A2E-A22E-755058272C25",
+      "title" : "Completed",
+      "color" : "ffff3b30",
       "issueIDs" : [
         "BAEA07A8-B1D5-4D6C-A75C-3770AEB49925",
         "0E9315C1-A0B9-4C6E-8C87-F9805ACB1AB9",
         "602740BE-EA22-4DFC-9B61-93E36A59C323"
-      ],
-      "color" : "ffff3b30",
-      "title" : "Completed",
-      "identifier" : "9B20C1D9-9743-4A2E-A22E-755058272C25"
+      ]
     },
     {
-      "issueIDs" : [
-
-      ],
-      "color" : "ffff3b30",
+      "identifier" : "FB3D8752-7FD8-4855-9A50-CE7917F124C0",
       "title" : "On Hold",
-      "identifier" : "FB3D8752-7FD8-4855-9A50-CE7917F124C0"
-    },
-    {
+      "color" : "ffff3b30",
       "issueIDs" : [
 
-      ],
-      "color" : "ffff3b30",
+      ]
+    },
+    {
+      "identifier" : "3FC90780-9349-4C59-99A4-FDBC131E62CC",
       "title" : "Dropped",
-      "identifier" : "3FC90780-9349-4C59-99A4-FDBC131E62CC"
-    }
-  ],
-  "issues" : [
-    {
-      "modified" : 782171637.569846,
-      "identifier" : "D05C19D0-E2A6-45B0-8C0B-C61DFDDAF4AF",
-      "title" : "Feature: custom button",
-      "due" : 782049658.141171,
-      "created" : 782049658.141171,
-      "body" : "I want to input a custom amount, different from the default button\n\n`250 mL` → default button\n`custom` → custom amount button (opens numpad where you can input the amount you want to save)",
-      "number" : 1,
-      "closed" : false
-    },
-    {
-      "modified" : 782050896.941125,
-      "identifier" : "30A28B87-9542-4988-99A5-BCF81C6A5290",
-      "title" : "Feature: smoothie button",
-      "due" : 782050251.241014,
-      "created" : 782050251.241013,
-      "body" : "",
-      "number" : 2,
-      "closed" : false
-    },
-    {
-      "modified" : 782050887.789596,
-      "identifier" : "C4EA7239-8C44-4C41-9AC3-429698200854",
-      "title" : "Feature: coffee button",
-      "due" : 782050322.441137,
-      "created" : 782050322.441136,
-      "body" : "Coffee 250ml = 150ml water",
-      "number" : 3,
-      "closed" : false
-    },
-    {
-      "modified" : 782050880.852869,
-      "identifier" : "0E458D55-62EE-456A-8953-7C6F220E22B2",
-      "title" : "Feature: reminders",
-      "due" : 782050351.422433,
-      "created" : 782050351.422433,
-      "body" : "The app reminds you periodically to drink water via push notification",
-      "number" : 4,
-      "closed" : false
-    },
-    {
-      "modified" : 782050724.044314,
-      "identifier" : "CB53813B-6383-4E6E-A680-0763003DF9E8",
-      "title" : "Feature: complication",
-      "due" : 782050361.563743,
-      "created" : 782050361.563743,
-      "body" : "- Shows total intake\n- pressing adds default amount\n",
-      "number" : 5,
-      "closed" : false
-    },
-    {
-      "modified" : 782050679.527122,
-      "identifier" : "9858EA27-1115-41A5-8C5E-F94EA5B7931D",
-      "title" : "Setting: change default button",
-      "due" : 782050384.318732,
-      "created" : 782050384.318732,
-      "body" : "Main button + complication have different amounts and\/or measurements",
-      "number" : 6,
-      "closed" : false
-    },
-    {
-      "modified" : 782050603.601699,
-      "identifier" : "18E9A4D2-F245-4FDC-A575-73F61F3C2752",
-      "title" : "Setting: change measurement",
-      "due" : 782050486.696597,
-      "created" : 782050486.696597,
-      "body" : "e.g. mL → L",
-      "number" : 7,
-      "closed" : false
-    },
-    {
-      "modified" : 782050814.965098,
-      "identifier" : "934B26FA-546C-4000-8BFB-11B1EC51FA31",
-      "title" : "Improvement: complication",
-      "due" : 782050732.604121,
-      "created" : 782050732.604121,
-      "body" : "- pressing opens the app without adding\n- shows how much until your goal\n- setting: change “on press” amount",
-      "number" : 8,
-      "closed" : false
-    },
-    {
-      "modified" : 782050971.832611,
-      "identifier" : "6FD42263-C5C7-4A07-A40D-7F9BAECD719A",
-      "title" : "Feature: optional daily goal",
-      "due" : 782050903.473186,
-      "created" : 782050903.473185,
-      "body" : "How much water you want to intake in a day\n- if set → complication shows how much until your goal\n- if not → complication shows your total intake for today",
-      "number" : 9,
-      "closed" : false
-    },
-    {
-      "modified" : 782155873.056682,
-      "identifier" : "660370D8-3001-4700-90D9-47490FB44C1A",
-      "title" : "Feature: logo",
-      "due" : 782051125.153014,
-      "created" : 782051125.153014,
-      "body" : "Add logo for app",
-      "number" : 10,
-      "closed" : false
-    },
-    {
-      "modified" : 782155903.385077,
-      "identifier" : "BAEA07A8-B1D5-4D6C-A75C-3770AEB49925",
-      "title" : "Bug: MainView doesn’t update with water from Health.app",
-      "due" : 782155873.35916,
-      "created" : 782155873.359159,
-      "body" : "",
-      "number" : 11,
-      "closed" : false
-    },
-    {
-      "modified" : 782166529.267764,
-      "identifier" : "602740BE-EA22-4DFC-9B61-93E36A59C323",
-      "title" : "Feature: refresh button",
-      "due" : 782166518.064956,
-      "created" : 782166518.064955,
-      "body" : "",
-      "number" : 12,
-      "closed" : false
-    },
-    {
-      "modified" : 782171729.288057,
-      "identifier" : "0E9315C1-A0B9-4C6E-8C87-F9805ACB1AB9",
-      "title" : "Bug: measurement doesn’t sync",
-      "due" : 782171646.856041,
-      "created" : 782171646.85604,
-      "body" : "- the entire app should use the measurement set in HealthKitManager\n- the string should be consistent\n- the logs (including external ones) should be converted and displayed in the selected measurement)",
-      "number" : 13,
-      "closed" : false
+      "color" : "ffff3b30",
+      "issueIDs" : [
+
+      ]
     }
   ]
 }
